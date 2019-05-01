@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+<div class="main">
+    <div class="login_icon" id="login_icon">
+        <img src="images/icon_l_1.png" alt="">
+    </div>
+
+    <div class="form">
+        <form action="">
+            <div class="enter"><input type="text" placeholder="手机号"></div>
+            <div class="enter">
+                <input type="text" placeholder="验证码">
+                <input type="button" value="获取验证码" id="button" style="width:auto;">
+            </div>
+            <div class="btn"><a href="userCenter.html">登录</a></div>
+        </form>
+    </div>
+
+</div>
+
+<div class="prompt" style="display: none;">
+    <div class="s_title">错误提示</div>
+    <div class="text">手机号码不存在</div>
+    <div class="btn"><a href="#">确定</a></div>
+</div>
+
+
+
+<script>
+    function setHeight(id){
+        var box = document.getElementById(id);
+        var Width = box.currentStyle? box.currentStyle.width : window.getComputedStyle(box, null).width;
+        Width = parseInt(Width);
+        box.style.height = Width + 'px';
+    }
+    setHeight('login_icon');
+
+    function change(id){
+        var box = document.getElementById(id);
+        var number = 60;
+        box.onclick = function() {
+            timer = setInterval(function () {
+                number--;
+                if(number == 0){
+                    box.value = '重新获取验证码';
+                    number = 60;
+                    box.disabled = false;
+                    clearInterval(timer)
+                }else{
+                    box.value = number + 's';
+                    box.style.color = '#4582ff';
+                    box.disabled = true;
+                }
+
+                console.log(number);
+            }, 1000)
+        }
+
+
+
+
+
+
+
+    }
+    change('button');
+
+
+
+</script>
+</body>
+</html>

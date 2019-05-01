@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>停车记录</title>
+ 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">   	
+    	<link rel="stylesheet" href="css/common.css" type="text/css"/>
+    	<link rel="stylesheet" href="css/EzStop.css" type="text/css"/>
+    	<link rel="stylesheet" href="css/LCalendar.css" />
+    	<script src="js/jquery-1.8.0.min.js" ></script>
+	</head>
+	<body>
+	<div class="box">
+		<div class="choose-ez">
+			<ul class="ezlist">
+				<li>欧洲城麦德龙(地面)</li>
+				<li>欧陆经典花园</li>
+				<li>麒麟山庄</li>
+				<li>东海花园</li>
+				<li>欧洲城百安居</li>
+				<li>劲嘉大厦西侧</li>
+				<li>白石洲北区</li>
+				<li>书香门第上河坊</li>
+			</ul>	
+		</div>
+		<div class="main_page">
+			<div class="select_start_date clf">
+				<div class="start_date_left">
+				</div>
+				<div class="start_date_right">
+					<input type="text" name="start_date" id="start_date" placeholder="开始时间" readonly="readonly" />
+				</div>
+			</div>
+			<div class="select_start_date clf">
+				<div class="start_date_left">
+				</div>
+				<div class="start_date_right">
+					<input type="text" name="end_date" id="end_date" placeholder="结束时间" readonly="readonly" />
+				</div>
+			</div>
+		</div>
+		<div class="header">
+		    <div class="return"><a href="userCenter.html"></a><img src="images/icon_l_arrow.png" alt=""></div>
+		    <div class="title">停车记录</div>
+		</div>		
+		<div class="box-head clf">
+			<div class="l-title fl">车场</div>
+			<div class="r-title fr">日期</div>
+		</div>
+		<div class="wap">
+		<div class="section clf">
+			<a href="#">
+			<ul class="clf">
+				<li>
+					<div class="sectio-left fl">
+						<p class="p-top"><span>东海花园</span></p>
+						<p class="p-bottom">粤B 23412</p>
+					</div>
+					<span class="red-text">月卡畅行</span>
+					<span class="right fr"><img style="width: 100%;height: 100%;" src="images/right.png"></span>
+				</li>
+				<li>
+					<span class="l-text fl">停放10小时36分钟</span>
+					<span class="r-text fr">7月23日 17:50离场</span>		
+				</li>
+			</ul>
+			</a>
+		</div>
+		
+		<div class="section clf">
+			<a href="#">
+			<ul class="clf">
+				<li>
+					<div class="sectio-left fl">
+						<p class="p-top"><span>东海花园</span></p>
+						<p class="p-bottom">粤B 23412</p>
+					</div>
+					<span class="red-text">10.00元</span>
+					<span class="right fr"><img style="width: 100%;height: 100%;" src="images/right.png"></span>
+				</li>
+				<li>
+					<span class="l-text fl">停放10小时36分钟</span>
+					<span class="r-text fr">7月23日 17:50离场</span>		
+				</li>
+			</ul>
+			</a>
+		</div>
+		<div class="section clf">
+			<a href="#">
+			<ul class="clf">
+				<li>
+					<div class="sectio-left fl">
+						<p class="p-top"><span>东海花园</span></p>
+						<p class="p-bottom">粤B 23412</p>
+					</div>
+					<span class="red-text">月卡畅行</span>
+					<span class="right fr"><img style="width: 100%;height: 100%;" src="images/right.png"></span>
+				</li>
+				<li>
+					<span class="l-text fl">停放10小时36分钟</span>
+					<span class="r-text fr">7月23日 17:50离场</span>		
+				</li>
+			</ul>
+			</a>
+		</div>
+		
+		<div class="section clf">
+			<a href="#">
+			<ul class="clf">
+				<li>
+					<div class="sectio-left fl">
+						<p class="p-top"><span>东海花园</span></p>
+						<p class="p-bottom">粤B 23412</p>
+					</div>
+					<span class="red-text">10.00元</span>
+					<span class="right fr"><img style="width: 100%;height: 100%;" src="images/right.png"></span>
+				</li>
+				<li>
+					<span class="l-text fl">停放10小时36分钟</span>
+					<span class="r-text fr">7月23日 17:50离场</span>		
+				</li>
+			</ul>
+			</a>
+		</div>
+		
+		</div>
+
+	</div>
+	</body>
+<script type="text/javascript" src="js/LCalendar.js" ></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+ 		 $(".r-title").click(function(){
+  			  $('.l-title').attr('class','l-title1 fl');
+  			  $('.r-title').addClass('r-title1');
+  			  $('.main_page').show();
+  			  $('.choose-ez').hide();
+  			});
+  		 $(".l-title").click(function(){
+			  $('.l-title1').attr('class','l-title fl');
+  			  $('.r-title').attr('class','r-title fr');
+  			  $('.choose-ez').show();
+  			  $('.main_page').hide();
+  			});
+  			var ezli=$(".ezlist").children();
+  			ezli.click(function(){
+  			  $('.choose-ez').hide();
+  			});
+	});
+		var calendar = new LCalendar();
+		calendar.init({
+			'trigger': '#start_date', //标签id
+			'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+			'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+			'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+		});
+		var calendar = new LCalendar();
+		calendar.init({
+			'trigger': '#end_date', //标签id
+			'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+			'minDate': (new Date().getFullYear()-3) + '-' + 1 + '-' + 1, //最小日期
+			'maxDate': (new Date().getFullYear()+3) + '-' + 12 + '-' + 31 //最大日期
+		});
+</script>
+</html>

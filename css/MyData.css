@@ -1,0 +1,17 @@
+.box{width: 100%;background-color: #eee;}
+.box-head{display:block;height: 5rem;width: 100%;background-color: #fff;}
+.section{width: 100%;margin-top:0.3rem;background-color: #fff;}
+.section>div{width: 90%;margin: 0 auto;height: 3rem;}
+.section>hr{width: 90%;margin: 0 auto;background-color: #eee;height: 0.05rem;}
+.line{width:90%;margin: 0 auto;background-color: #e2e1e4;height:0.06rem;}
+.section>.img{height:4.5rem;position: relative;}
+.pt{position: relative;}
+.img-l-text{display:block;font-size:1rem;color:#333;line-height: 4.5rem;}
+.l-text{display:block;font-size:1rem;color:#333;line-height: 3rem;}
+.photo{width: 3rem;height: 3rem;background-color:#ccc;border-radius:50%;margin-top: 0.8rem;position: absolute;right: 2rem;}
+.right1{display:block;width: 1rem;height: 1rem;margin-top:1.8rem;}
+.right{display:block;width: 1rem;height: 1rem;margin-top:1rem;}
+.r-text{display:block;font-size: 0.8rem;color:#666;line-height: 3rem;position: absolute;right: 1rem;padding-right: .2rem;}
+.box-foot{width: 100%;margin-top: 14rem;margin-bottom: 1.5rem;}
+.red-button{width: 80%;margin: 0 auto;text-align: center;height: 3rem;font-size: 0.8rem;line-height: 3rem;background-color: #ff3000;color: #fff;border-radius: 0.1rem;}
+

@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* 深圳市静江网络科技有限公司 */
+*,*:before,*:after {-webkit-box-sizing:border-box; box-sizing:border-box;margin:0; padding:0;}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust: 100%;width: 100%;height: 100%;}
+body{position:relative; color:#333;max-width:750px;margin:auto;}
+input{border:none;}
+input,select,option,textarea{outline: none;}
+input[type="button"],button,select{cursor: pointer;border: none;outline: none;}
+textarea{outline: none;}
+ul,li,h1,h2,h3,h4,h5,h6{list-style-type:none;}
+img{border:none;}
+a{text-decoration:none; color:#666;}
+a:hover{text-decoration:none;}
+.clf{zoom:1}
+.clf:before,.clf:after,.w:before,.w:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
+.fl{float: left;}
+.fr{float: right;}
+/* 初始化样式结束 */
+
+@media only screen and (max-width: 765px){
+    html {
+        font-size:100%!important;
+    }
+}
+@media only screen and (max-width: 375px){
+    html {
+        font-size:90.5%!important;
+    }
+}
+@media only screen and (max-width: 360px){
+    html {
+        font-size:87%!important;
+    }
+}
+@media only screen and (max-width: 320px){
+    html {
+        font-size:78%!important;
+    }
+}
+.header{width:100%;height:auto;padding:1rem 5% 1.5rem 5%;position:relative;border-bottom:1px solid #ccc;background:#f9f9f9;}
+.header .return{width:.8rem;height:1.5rem;position: relative;}
+.header .return img{width:100%;height:100%;}
+.header .return a{display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.header>.title{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:1.2rem;color:#333;line-height: 2rem;}
+.box{height: 100vh;}
+
+.car_input ul{width: 100%;position:relative;padding-left: 1rem;}
+.car_input ul li{width:calc((100% - 3.7rem) / 8);height: 2.5rem;margin: 0 0.15rem;border-radius: 0.5rem;background-color: #FFFFFF;float: left;}
+.car_input ul .po{width: 0.5rem;height: 0.5rem;border-radius: 50%;margin: 0;margin-top: 1rem;display: block;float: left;background: #fff;}
+.car_input ul li span{display:block;width: 100%;height: 100%;text-align: center;border-radius: 0.5rem;line-height: 2.5rem;}
+.car_input ul li:last-child{position: relative;}
+.car_input ul li:last-child p{height: 50%;text-align: center;color: #FFFFFF;font-size: 0.6rem;line-height: 100%;}
+.car_input ul button{width:10%;height: 100%;border-radius: 0.5rem;background: url(../images/newenergy.png) center/100% 100%;border: dotted 0.1rem #fff;position: absolute;top: 0;right: 1rem;z-index: 3;color: #fff;font-size:0.625rem;}
+.car_input ul button span{display:block;font-size:.6rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

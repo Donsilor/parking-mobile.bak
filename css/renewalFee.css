@@ -1,0 +1,48 @@
+body{background:#eee;}
+
+.main > div{width:100%;height:3rem;background:#fff;padding:0 5%;}
+.main > div .border{width:100%;height:100%;border-bottom:1px solid #dcdcdc;}
+.main > div .fl{font-size:1rem;color:#333;line-height:3rem;}
+.main > div .fr{line-height:3rem;}
+
+.main .dv1 .fr{font-size:1rem;color:#ff0000;}
+.main .dv2 .fr{padding-top:.5rem;}
+.main .dv2 .fr a{float:left;display:block;width:2.5rem;height:2rem;background:#4582ff;line-height:2rem;text-align:center;font-size:1.2rem;color:#fff;}
+.main .dv2 .fr span{float:left;display:block;width:2.5rem;height:2rem;line-height:2rem;text-align:center;background:#eee;}
+.main .dv2 .fr a:nth-of-type(1){border-top-left-radius:.2rem;border-bottom-left-radius:.2rem;}
+.main .dv2 .fr a:nth-of-type(2){border-top-right-radius:.2rem;border-bottom-right-radius:.2rem;}
+.main .dv3 .fr,
+.main .dv4 .fr
+{font-size:1rem;color:#666;}
+.main .dv5{font-size:1rem;color:#ff3600;}
+.main .dv6{margin-top:1rem;}
+
+.pay{width:100%;height:auto;position:fixed;bottom:0;left:0;}
+.pay form > div{width:100%;height:3rem;background:#fff;}
+.pay form > div:last-child{margin-top:1rem;}
+.pay form > div:nth-of-type(2){margin-top:.3rem;}
+.pay form > div:nth-child(1),
+.pay form > div:nth-child(2){padding:0 5%;}
+.pay form > div:nth-child(1) > .fl,
+.pay form > div:nth-child(2) > .fl{font-size:1.1rem;color:#333;height:100%;line-height:3rem;}
+.pay form > div:nth-child(1) > .fl:before{content:'';display:inline-block;width:2rem;height:2rem;background:url(../images/icon_z_pay.png)no-repeat center/100%;vertical-align:middle;margin-right:.5rem;}
+.pay form > div:nth-child(2) > .fl:before{content:'';display:inline-block;width:2rem;height:2rem;background:url(../images/icon_w_pay.png)no-repeat center/100%;vertical-align:middle;margin-right:.5rem;}
+.pay form > div:nth-child(1) > .fr,
+.pay form > div:nth-child(2) > .fr{width:1rem;height:100%;padding-top:1rem;}
+.pay form > div:nth-child(1) > .fr input,
+.pay form > div:nth-child(2) > .fr input{width:1.2rem;height:1.2rem;}
+.pay form > div:nth-child(3){padding-left:8%;line-height:3rem;}
+.pay form > div:nth-child(3) .fl{font-size:1.1rem;color:#595959;}
+.pay form > div:nth-child(3) .fl span{color:#ff3600;}
+.pay form > div:nth-child(3) .fr{width:35%;height:100%;background:#4582ff;border-radius:.2rem;}
+.pay form > div:nth-child(3) .fr a{display:block;background:none;font-size:1rem;color:#fff;line-height:3rem;text-align:center;width:100%;}
+
+
+
+
+
+
+
+
+
+

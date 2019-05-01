@@ -1,0 +1,81 @@
+.main{padding:1.125rem 0 0;}
+.card{width:90%;height:6.875rem;border-radius:.5rem;margin:1.5rem auto 0;line-height:6.875rem;padding-left:8%;position:relative;;
+    background: -webkit-linear-gradient(left, #5577f7 , #60c1ff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #5577f7 , #60c1ff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #5577f7 , #60c1ff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #5577f7 , #60c1ff); /* 标准的语法 */
+
+}
+.card:before{content:'';width:0.875rem;height:1.625rem;background:url(../images/icon_r_w_arrow.png)no-repeat center/cover;position:absolute;right:2rem;top:50%;transform:translateY(-50%);}
+.card > a > div span{font-size:1.2rem;color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

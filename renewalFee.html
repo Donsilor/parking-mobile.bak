@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>月卡续费</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/renewalFee.css">
+
+</head>
+<body>
+<div class="header">
+    <div class="return"><a href="monthlyCard.html"></a><img src="images/icon_l_arrow.png" alt=""></div>
+    <div class="title">月卡续费</div>
+</div>
+
+<div class="main">
+    <div class="dv1">
+        <div class="clf border">
+            <div class="fl">月卡价格</div>
+            <div class="fr">250.00元/月</div>
+        </div>
+    </div>
+    <div class="dv2">
+        <div class="clf border">
+            <div class="fl">续费月数</div>
+            <div class="clf fr" id="months">
+                <a href="#"> - </a>
+                <span>0</span>
+                <a href="#"> + </a>
+            </div>
+        </div>
+    </div>
+    <div class="dv3">
+        <div class="clf border">
+            <div class="fl">续费开始时间</div>
+            <div class="fr" id="day_1"><span></span>-<span></span>-<span></span></div>
+        </div>
+    </div>
+    <div class="dv4">
+        <div class="clf border">
+            <div class="fl">续费后有效期</div>
+            <div class="fr" id="day_2"><span>至</span> <span></span>-<span></span>-<span></span></div>
+        </div>
+    </div>
+    <div class="clf dv5">
+        <div class="fl">需支付</div>
+        <div class="fr">￥<span id="money">0</span></div>
+    </div>
+
+    <div class="clf dv6">
+        <div class="fl">优惠金额</div>
+        <div class="fr"><span>0.00</span>元</div>
+    </div>
+
+</div>
+
+<div class="pay">
+    <form action="">
+        <div class="clf">
+            <div class="fl">支付宝支付</div>
+            <div class="fr"><input type="radio" name="radio"></div>
+        </div>
+        <div class="clf">
+            <div class="fl">微信支付</div>
+            <div class="fr"><input type="radio" name="radio"></div>
+        </div>
+        <div class="clf">
+            <div class="fl">应缴 <span>￥</span><span id="pay">0.00</span></div>
+            <div class="fr"><a href="PaySuc.html">立即续费</a></div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function change(id1,id2,id3){
+        var box = document.getElementById(id1);
+        var reduce = box.children[0];
+        var quantity = box.children[1];
+        var number = box.children[1].innerHTML;
+        var add = box.children[2];
+        var money = document.getElementById(id2);
+        var pay = document.getElementById(id3);
+
+//        获取时间
+        var dateNow = new Date();
+//        获取时间节点1
+        var time_1 = document.getElementById('day_1');
+        var year_1 =  time_1.children[0];
+        var month_1 = time_1.children[1];
+        var day_1 = time_1.children[2];
+
+        //修改时间1
+        var year = dateNow.getFullYear();
+        var month = dateNow.getMonth();
+            function setMonth(){
+                if(month > 9){
+                    return month + 1;
+                }else{
+                    return '' + (month + 1);
+                }
+            }
+        var day = dateNow.getDate();
+
+        year_1.innerHTML = year;
+        month_1.innerHTML = setMonth();
+        day_1.innerHTML = day;
+
+        //  修改时间2
+
+        var time_2 = document.getElementById('day_2');
+        var year_2 =  time_2.children[1];
+        var month_2 = time_2.children[2];
+        var day_2 = time_2.children[3];
+
+        year_2.innerHTML = year;
+        month_2.innerHTML = setMonth();
+        day_2.innerHTML = day_1.innerHTML;
+
+//增加
+        add.onclick = function(){
+            number++;
+            quantity.innerHTML = number;
+            reduce.style.backgroundColor = '#4582ff';
+            money.innerHTML = number * 250 +'.00 ';
+            pay.innerHTML = number * 250 +'.00 ';
+            if(parseInt(setMonth()) + parseInt(number) >= 10){
+                month_2.innerHTML = parseInt(setMonth()) + parseInt(number);
+
+            }else{
+                month_2.innerHTML = '0' + (parseInt(setMonth()) + parseInt(number));
+            }
+
+            if(month_2.innerHTML / 12 < 0){
+                year_2.innerHTML = year ;
+            }else if(month_2.innerHTML % 12 ==1){
+                var a = parseInt(month_2.innerHTML / 12);
+                year_2.innerHTML = year + a;
+            }
+
+            if(month_2.innerHTML % 12 == 0){
+                month_2.innerHTML = 12;
+            }else{
+                month_2.innerHTML = month_2.innerHTML % 12;
+                if(month_2.innerHTML % 12  < 10){
+                    month_2.innerHTML = '0' + month_2.innerHTML;
+                }
+            }
+
+        };
+
+//减少
+        reduce.onclick = function(){
+            if(number == 0){
+                quantity.innerHTML = 0;
+                this.style.backgroundColor = '#ccc';
+            }else{
+                number--;
+                quantity.innerHTML = number;
+                money.innerHTML = number * 250 +'.00 ';
+                pay.innerHTML = number * 250 +'.00 ';
+
+                month_2.innerHTML = fun();
+                function fun(){
+                    if(parseInt(setMonth()) + parseInt(number) >= 10){
+                        return parseInt(setMonth()) + parseInt(number);
+
+                    }else{
+                        return '0' + (parseInt(setMonth()) + parseInt(number));
+                    }
+                }
+
+                if(month_2.innerHTML / 12 < 0){
+                    year_2.innerHTML = year ;
+                }else if(month_2.innerHTML % 12 == 0){
+                    var a = parseInt(month_2.innerHTML / 12);
+                    var year = year_2.innerHTML;
+                    year--;
+                    year_2.innerHTML = year;
+                    console.log(month_2.innerHTML);
+
+                }
+
+                if(month_2.innerHTML % 12 == 0){
+                    month_2.innerHTML = 12;
+                }else{
+                    month_2.innerHTML = month_2.innerHTML % 12;
+                    if(month_2.innerHTML % 12  < 10){
+                        month_2.innerHTML = '0' + month_2.innerHTML;
+                    }
+                }
+
+            }
+
+        };
+
+
+
+    }
+    change('months','money','pay')
+
+
+</script>
+</body>
+</html>

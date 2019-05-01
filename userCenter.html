@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/userCenter.css">
+</head>
+<body>
+<div class="box">
+<div class="header">
+    <div class="return"><a href="login.html"></a><img src="images/icon_l_arrow.png" alt=""></div>
+    <div class="title">个人中心</div>
+</div>
+<div class="main">
+    <div class="info">
+        <div class="photo">
+            <div class="img" id="img"><img src="" alt=""></div>
+            <div class="name">李大昌</div>
+        </div>
+        <div class="clf bottom">
+            <div class="fl position">碧海苑2栋1单元1609</div>
+            <div class="fr user"><a href="MyData.html">业主</a></div>
+        </div>
+
+        <div class="btn"><a href="#"><img src="images/icon_r_w_arrow.png" alt=""></a></div>
+    </div>
+
+    <div class="btns" id="btns">
+        <ul class="clf">
+            <li>
+                <a href="TemporaryCar.html">
+                    <div class="center-box">
+                        <div class="img1"><img src="images/icon_1.png" alt=""></div>
+                        <div class="text">登记临时车</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="monthlyCard.html">
+                    <div class="center-box">
+                        <div class="img"><img src="images/icon_2.png" alt=""></div>
+                        <div class="text">续约卡</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="TemporaryCar-1.html">
+                    <div class="center-box">
+                        <div class="img1"><img src="images/icon_3.png" alt=""></div>
+                        <div class="text">登记临占固</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="myCar.html">
+                    <div class="center-box">
+                        <div class="img"><img src="images/icon_4.png" alt=""></div>
+                        <div class="text">我的车辆</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="EzStop.html">
+                    <div class="center-box">
+                        <div class="img"><img src="images/icon_5.png" alt=""></div>
+                        <div class="text">停车记录</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
+<script>
+    function setHeight(id){
+        var box = document.getElementById(id);
+        var Width = box.currentStyle? box.currentStyle.width : window.getComputedStyle(box, null).width;
+        Width = parseInt(Width);
+        box.style.height = Width + 'px';
+
+    }
+    setHeight('img');
+
+    function setHeight1(id){
+        var box = document.getElementById(id);
+        var lis = box.children[0].children;
+        var li = lis[0];
+        var Height = box.currentStyle? li.currentStyle.width : window.getComputedStyle(li, null).width;
+        for(var i=0; i<lis.length; i++){
+            lis[i].style.height = Height;
+        }
+    }
+    setHeight1('btns');
+
+
+
+</script>
+</body>
+</html>

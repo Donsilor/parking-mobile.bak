@@ -1,0 +1,32 @@
+.box{height:100vh;background:url(../images/mycar_bg.png) center/100% 100%;}
+.wrap{padding-top: 2.5rem;}
+.section-two{width: 95%;margin: 0 auto;margin-top: 2.5rem;}
+.top{width: 100%;background-color: #4582ff;border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;padding-bottom:2.875rem;position:relative;}
+.top-title{display: block;font-size: 1rem;color: #FFFFFF;text-align: center;padding-top: 1.875rem;padding-bottom: 1.25rem;}
+.top-text{display: block;margin-left: 1rem;color: #000;font-size: 1rem;line-height: 2.5rem;padding-top: 0.5rem;}
+
+/*MyCar*/
+.bot{width: 100%;height:5.25rem;background-color: #FFFFFF;border-bottom-left-radius: 0.5rem;border-bottom-right-radius: 0.5rem;}
+.section-one{width: 95%;margin: 0 auto;}
+.section-one p:first-child{width: 81%;}
+.section-one p:last-child{color:#4582ff;font-size: 1rem;width: 18%;}
+.location{display:block;height: 1rem;width: 1rem;}
+.top-text{display: block;margin-left: 1rem;color: #333;font-size: 1rem;padding-top: 0.5rem;}
+.bot-text{display: block;margin-left: 1rem;color: #999;font-size: 0.8rem;}
+.orag-text{color:#ff7e37;}
+/*MyCar*/
+
+/*TemporaryCar.css*/
+.tp-text{display: block;color: #333;font-size: 1rem;line-height: 2.5rem;padding-top: 0.5rem;width: 90%;margin: 0 auto;}
+.t-bot{width: 100%;height: 7rem;background-color: #FFFFFF;border-bottom-left-radius: 0.5rem;border-bottom-right-radius: 0.5rem;}
+.time{display: block;color: #aaaaaa;font-size: 1rem;width: 90%;margin: 0 auto;background-color: #f4f4f4;;padding: 0 0.5rem;border-radius: 0.5rem;}
+.time>input{display:block;width:40%;background-color: #f4f4f4;color: #aaaaaa;font-size: 0.5rem;margin: .8rem 0;}
+.line{display:block;color: #666666;padding-top:.8rem;width: 1rem;margin-right: 1rem;}
+.button{width: 75%;margin: 0 auto;margin-top: 2.5rem;}
+.button>p{height: 3rem;width: 100%;color: #FFFFFF;font-size: 1rem;background-color: #4582ff;text-align: center;line-height: 3rem;border-radius: 0.5rem;letter-spacing: 0.2rem;}
+
+/*TemporaryCar-1.css*/
+.section-one>ul{width: 100%;height: 100%;}
+.section-one>ul>li{width: calc((100% - 2.4rem) / 3);height: 3rem;text-align: center;line-height: 3rem;border-radius: 0.5rem;font-size: 1rem;float: left;background-color: #FFFFFF;color: #333;margin-right: 1.2rem;}
+.section-one .active{background-color: #4582ff;color: #FFFFFF;}
+.section-one>ul>li:last-child{margin: 0;}

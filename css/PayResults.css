@@ -1,0 +1,5 @@
+.box{background-color: #eee;height:100vh;}
+.section{width: 100%;padding-top: 11rem;}
+.car{width:6rem;height: 6rem;margin:  0 auto;}
+.t-text{display: block;text-align: center;font-size: 1rem;color: orange;padding-top: 2rem;}
+.b-text{display: block;text-align: center;font-size: 0.8rem;color: #000;line-height: 3rem;}

@@ -1,0 +1,9 @@
+.box{background-image: url(../images/paysuc-bg.jpg);background-size: cover;}
+.section{width: 100%;height:100vh;padding-top: 8rem;}
+.center{width: 87.6%;margin: 0 auto;height: 15rem;position: relative;}
+.section-one{width: 100%;height: 100%;background-color: #FFFFFF;border-radius: 0.5rem;}
+.tf{width: 5.5rem;height: 5.5rem;margin: 0 auto;background-color: #FFFFFF;border-radius: 50%;position: absolute;top: -2.75rem;left: calc(50% - 2.75rem);}
+.b-title{display:block;font-size: 1.2rem;text-align: center;width: 100%;color:#4582ff;padding-top: 4rem;padding-bottom: 2rem;}
+.gry{display:block;font-size:1rem;text-align: center;width: 100%;color: #666;line-height: 2rem;}
+.y-text{color:#ff9155;}
+.g-text{color:#9adb43;}
